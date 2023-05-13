@@ -16,6 +16,7 @@ use App\Models\highlight;
 use App\Models\tambahdestinasi;
 use App\Models\tambahseason;
 use App\Models\hargachild;
+use App\Models\affiliate;
 use Illuminate\Http\Request;
 // use Illuminate\Http\Request::server();
 use App\Models\harga;
@@ -522,6 +523,30 @@ public function inserttravelagent(Request $request){
     $phone=Request('phone');
     $message=Request('message');
 
+    $data=[
+        'website'=>$website,
+        'socialmedia'=>$sosmed,
+        'address'=>$address,
+        'name'=>$name,
+        'job'=>$job,
+        'email'=>$email,
+        'phone'=>$phone,
+        'message'=>$message
+    ];
+    travelagent::create($data);
+    Alert::success('Success');
+    return redirect()->back();
+}
+
+public function insertaffiliate(Request $request){
+    $website=Request('website');
+    $sosmed=Request('sosmed');
+    $address=Request('address');
+    $name=Request('name');
+    $email=Request('email');
+    $job=Request('job');
+    $phone=Request('phone');
+    $message=Request('message');
 
     $data=[
         'website'=>$website,

@@ -293,6 +293,18 @@ Route::get('/influencer/influencer',function(){
     $bahasa=bahasa::get();
     return view('frontend.influencer',compact('bahasa'));
 });
+Route::get('/onlinebooking/platform',function(){
+    $bahasa=bahasa::get();
+    return view('frontend.bookingplatform',compact('bahasa'));
+});
+Route::get('/affiliate/affiliateprogram',function(){
+    $bahasa=bahasa::get();
+    return view('frontend.affiliateprogram',compact('bahasa'));
+});
+Route::get('/sellyourtours/sellyourtours',function(){
+    $bahasa=bahasa::get();
+    return view('frontend.sellyourtour',compact('bahasa'));
+});
 Route::get('/jajal',function(){
     return view('frontend.jajal');
 });
